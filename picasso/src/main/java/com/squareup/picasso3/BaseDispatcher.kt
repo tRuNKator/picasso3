@@ -78,7 +78,7 @@ internal abstract class BaseDispatcher internal constructor(
   init {
     scansNetworkChanges = hasPermission(context, ACCESS_NETWORK_STATE)
     receiver = NetworkBroadcastReceiver(this)
-    receiver.register()
+    //receiver.register()
   }
 
   @CallSuper override fun shutdown() {

@@ -54,6 +54,7 @@ internal class InternalCoroutineDispatcher internal constructor(
         channel.receive().invoke()
       }
     }
+	receiver.register()
   }
 
   override fun shutdown() {

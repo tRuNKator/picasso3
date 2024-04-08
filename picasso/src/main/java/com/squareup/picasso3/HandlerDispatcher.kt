@@ -44,6 +44,7 @@ internal class HandlerDispatcher internal constructor(
     flushStackLocalLeaks(dispatcherThreadLooper)
     handler = DispatcherHandler(dispatcherThreadLooper, this)
     mainHandler = MainDispatcherHandler(mainThreadHandler.looper, this)
+	receiver.register()
   }
 
   override fun shutdown() {
